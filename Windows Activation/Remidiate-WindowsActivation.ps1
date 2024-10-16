@@ -15,6 +15,7 @@ else{
 
 try{
     Write-Output "Key used: $activationKey"
+    slmgr.vbs /ipk $activationKey
     slmgr.vbs /ato
     Write-Output "Windows Activation attempt complete!"
 }
