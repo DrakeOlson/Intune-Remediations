@@ -1,3 +1,7 @@
+if(-not (Test-Path "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Remediations" -PathType Container)){
+    New-Item -Path "C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Remediations" -ItemType Directory -Force
+}
+
 Start-Transcript -Path C:\ProgramData\Microsoft\IntuneManagementExtension\Logs\Remediations\Remidiate-WindowsActivation.log -Append
 
 $MAKKey = "" #Fill in the value here if you want to use a MAK key to activate. If empty, motherboard key will be used.
